@@ -1,65 +1,43 @@
-# Qwik City App ⚡️
+# Cher! - Web Application
 
-- [Qwik Docs](https://qwik.dev/)
-- [Discord](https://qwik.dev/chat)
-- [Qwik GitHub](https://github.com/QwikDev/qwik)
-- [@QwikDev](https://twitter.com/QwikDev)
-- [Vite](https://vitejs.dev/)
+This repository contains the codebase for the web application for `Cher!`. This
+README description will be expanded upon as development progresses, and will
+currently serve as internal documentation for the team.
 
----
+## Tech Stack
 
-## Project Structure
+This web application plans on using the following technologies to develop upon.
+Feel free to click each of the links to be redirected to the corresponding
+project pages.
 
-This project is using Qwik with [QwikCity](https://qwik.dev/qwikcity/overview/). QwikCity is just an extra set of tools on top of Qwik to make it easier to build a full site, including directory-based routing, layouts, and more.
+- [Qwik City](https://qwik.dev/docs/qwikcity/) — A React-like JavaScript framework with blazingly render times
+- [Supabase](https://supabase.com/) — An amazing open source Firebase alternative
+- [Bun](https://bun.sh/) — A blazingly fast Javascript runtime
 
-Inside your project, you'll see the following directory structure:
+## Devcontainer Documentation
 
-```
-├── public/
-│   └── ...
-└── src/
-    ├── components/
-    │   └── ...
-    └── routes/
-        └── ...
-```
+### Overview
 
-- `src/routes`: Provides the directory-based routing, which can include a hierarchy of `layout.tsx` layout files, and an `index.tsx` file as the page. Additionally, `index.ts` files are endpoints. Please see the [routing docs](https://qwik.dev/qwikcity/routing/overview/) for more info.
+This project uses [development containers](https://containers.dev/) to spin up
+reproducible development environments, reducing the headaches caused by
+dependency management issues. Development containers (devcontainers) allow one
+to specify ways to build an environment with a `Dockerfile`, and adds additional
+features such as automatically installing VSCode extensions to make our lives
+easy.
 
-- `src/components`: Recommended directory for components.
+The devcontainer setup is located in the `.devcontainer` directory in the same
+level as this README. Here's a short explanation of each of its internal files:
 
-- `public`: Any static assets, like images, can be placed in the public directory. Please see the [Vite public directory](https://vitejs.dev/guide/assets.html#the-public-directory) for more info.
+- `devcontainer.json` — Specifies the `Dockerfile` to build from. Contains
+  VSCode extensions and `bun install`
+- `Dockerfile` — The base devcontainer image. Contains terminal environment
+  setup code and additional packages installed via `apt`
 
-## Add Integrations and deployment
+### Installation
 
-Use the `bun qwik add` command to add additional integrations. Some examples of integrations includes: Cloudflare, Netlify or Express Server, and the [Static Site Generator (SSG)](https://qwik.dev/qwikcity/guides/static-site-generation/).
+To get the devcontainer up and running, proceed with the following steps:
 
-```shell
-bun qwik add # or `bun qwik add`
-```
-
-## Development
-
-Development mode uses [Vite's development server](https://vitejs.dev/). The `dev` command will server-side render (SSR) the output during development.
-
-```shell
-npm start # or `bun start`
-```
-
-> Note: during dev mode, Vite may request a significant number of `.js` files. This does not represent a Qwik production build.
-
-## Preview
-
-The preview command will create a production build of the client modules, a production build of `src/entry.preview.tsx`, and run a local server. The preview server is only for convenience to preview a production build locally and should not be used as a production server.
-
-```shell
-bun preview # or `bun preview`
-```
-
-## Production
-
-The production build will generate client and server modules by running both client and server build commands. The build command will use Typescript to run a type check on the source code.
-
-```shell
-bun build # or `bun build`
-```
+1. Install the [devcontainer extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers)
+2. Press `Ctrl + Shift + P` to bring up the command prompt
+3. Search for `Dev Containers: Open Folder in Container...` and open **this** directory
+4. The environment should automatically build in a few minutes
