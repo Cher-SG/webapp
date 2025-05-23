@@ -1,0 +1,15 @@
+{
+    "name": "Cher!",
+    "build": {
+        "dockerfile": "Dockerfile"
+    },
+    "customizations": {
+        "vscode": {
+            "extensions": []
+        }
+    },
+    "features": {
+        "ghcr.io/devcontainers/features/github-cli:1": {}
+    },
+    "postCreateCommand": "bun install"
+}
