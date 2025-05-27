@@ -39,5 +39,5 @@ To get the devcontainer up and running, proceed with the following steps:
 
 1. Install the [devcontainer extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers)
 2. Press `Ctrl + Shift + P` to bring up the command prompt
-3. Search for `Dev Containers: Open Folder in Container...` and open **this** directory
+3. Search for `Clone Repository in Container Volume...` and open **this** directory
 4. The environment should automatically build in a few minutes
